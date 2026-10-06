@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Indupallis Invitation & Engagement</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    html, body { height: 100%; }
+
+    /* First view: royal cream, fixed background */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fdf7ec 0%, #f5eee6 50%, #f0e4d6 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+      color:#2a1a16;
+    }
+
+    /* Second view: royal maroon + navy + gold */
+    body.dark-mode {
+      background: radial-gradient(circle at 15% 0%, #f8dca0 0%, #3C0008 40%, #1b2038 100%);
+      background-size: 200% 200%;
+      background-attachment: fixed;
+      animation: royalGradient 32s ease-in-out infinite;
+      color:#fdf7ec;
+    }
+
+    @keyframes royalGradient {
+      0%   { background-position: 0% 0%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    /* Reverse-rain doodles, each with slightly different height and speed [web:368][web:377] */
+    .doodle-bg {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+      overflow:hidden;
+    }
+
+    .floater {
+      position:absolute;
+      opacity:0.35;
+    }
+
+    @keyframes reverseRainShort {
+      0%   { transform: translateY(30vh); }
+      100% { transform: translateY(-30vh); }
+    }
+
+    @keyframes reverseRainTall {
+      0%   { transform: translateY(50vh); }
+      100% { transform: translateY(-50vh); }
+    }
+
+    .rain-slow-short {
+      animation: reverseRainShort 22s linear infinite;
+    }
+
+    .rain-fast-short {
+      animation: reverseRainShort 14s linear infinite;
+    }
+
+    .rain-slow-tall {
+      animation: reverseRainTall 26s linear infinite;
+    }
+
+    .rain-fast-tall {
+      animation: reverseRainTall 16s linear infinite;
+    }
+
+    @keyframes flapWings { 0%,100%{transform:scaleY(1);} 50%{transform:scaleY(0.6);} }
+    .pigeon-wings { display:inline-block; animation: flapWings 0.7s ease-in-out infinite; transform-origin:center; }
+
+    /* Screens */
+    .screen-main,
+    .screen-invite {
+      position:relative;
+      z-index:1;
+      width:100%;
+      max-width:560px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .screen-main {
+      justify-content:center;
+      min-height:100vh;
+      display:flex;
+    }
+
+    .screen-invite {
+      justify-content:flex-start;
+      min-height:100vh;
+      display:none;
+    }
+
+    /* First view */
+    .tagline-top {
+      font-size:clamp(0.85rem,3.5vw,1rem);
+      color:#8b3b2a;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      opacity:0.9;
+      margin-bottom:6px;
+      white-space:nowrap;
+    }
+
+    .main-title {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,5vw,2.6rem);
+      color:#3b1b15;
+      letter-spacing:1.5px;
+      text-shadow:0 4px 18px rgba(80,40,26,0.25);
+      line-height:1.2;
+      padding:0 10px;
+      margin-bottom:10px;
+      white-space:nowrap;
+    }
+
+    .rings-doodle {
+      font-size:clamp(1.9rem,6vw,2.5rem);
+      margin:10px 0;
+      animation:pulse 2.3s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.15);} }
+
+    .invite-btn {
+      display:inline-block;
+      width:90%; max-width:320px;
+      padding:18px 30px;
+      background:linear-gradient(135deg,#8b3b2a,#c47c3b);
+      color:#fff7ec;
+      font-size:clamp(1rem,4.5vw,1.15rem);
+      font-weight:bold;
+      font-family:'Playfair Display',serif;
+      border-radius:50px;
+      text-decoration:none;
+      letter-spacing:1.8px;
+      box-shadow:0 10px 28px rgba(128,63,34,0.55);
+      border:2px solid rgba(248,220,160,0.85);
+      touch-action:manipulation;
+      cursor:pointer;
+      transition:transform 0.2s, box-shadow 0.2s;
+      margin-top:12px;
+    }
+    .invite-btn:active { transform:scale(0.96); }
+    @media (hover:hover) {
+      .invite-btn:hover {
+        transform:translateY(-3px) scale(1.03);
+        box-shadow:0 14px 36px rgba(128,63,34,0.8);
+      }
+    }
+
+    .tagline-bottom {
+      font-size:clamp(0.8rem,3vw,1rem);
+      color:#7b6253;
+      letter-spacing:2px;
+      margin-top:16px;
+      font-style:italic;
+      opacity:0.95;
+    }
+
+    /* Second view */
+    .content-invite {
+      width:100%;
+      max-width:560px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:40px;
+      margin-bottom:40px;
+      padding:0 14px;
+    }
+
+    .invite-inner {
+      width:100%;
+      text-align:center;
+      color:#fdf7ec;
+    }
+
+    .cross {
+      font-size:1.7rem;
+      color:#f8dca0;
+      margin-bottom:10px;
+      margin-top:5px;
+    }
+
+    .bible-quote {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #f3e7d5;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .divider-heart {
+      color:#f8dca0;
+      font-size:0.9rem;
+      letter-spacing:3px;
+      margin:10px 0;
+    }
+
+    .please-join {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f8dca0;
+      margin-bottom: 6px;
+    }
+
+    .engagement-title {
+      font-size: 2.1rem;
+      font-family: 'Playfair Display', serif;
+      color: #f8dca0;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .celebration {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.4rem;
+      color: #f3e7d5;
+      line-height: 1;
+      margin-top: 5px;
+    }
+
+    .leaf-divider {
+      font-size:0.95rem;
+      color:#f8dca0;
+      margin:12px 0;
+    }
+
+    .couple-names {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.3rem;
+      color: #fdf7ec;
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 16px 0 6px;
+    }
+
+    .amp {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #f8dca0;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .heart-small { color:#f8dca0; font-size:1.1rem; margin:10px 0; }
+
+    .journey-section {
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .journey-title {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f8dca0;
+      margin-bottom: 10px;
+    }
+
+    .journey-subtitle {
+      font-size: 0.85rem;
+      color: #f3e7d5;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .journey-flow {
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .journey-step {
+      flex:1;
+      text-align:center;
+    }
+
+    .journey-icon {
+      font-size:1.6rem;
+      margin-bottom:6px;
+      color:#f8dca0;
+    }
+
+    .journey-label {
+      font-size:0.82rem;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      color:#fdf7ec;
+      margin-bottom:4px;
+      font-weight:600;
+    }
+
+    .journey-text {
+      font-size:0.8rem;
+      color:#f3e7d5;
+      line-height:1.6;
+    }
+
+    .journey-line {
+      height:2px;
+      background:linear-gradient(90deg,#f8dca0,#c47c3b,#f8dca0);
+      width:100%;
+      margin:12px 0 0;
+      border-radius:999px;
+    }
+
+    .cheers-msg {
+      font-size: 0.9rem;
+      color: #f3e7d5;
+      line-height: 1.8;
+      margin: 12px 0 18px;
+    }
+
+    .details-block {
+      margin-top: 10px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(248,220,160,0.55);
+    }
+
+    .details-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .detail-item {
+      flex: 1;
+      text-align: center;
+      padding: 0 8px;
+      color: #fdf7ec;
+      border-left: 1px solid rgba(248,220,160,0.45);
+    }
+
+    .detail-item:first-child {
+      border-left: none;
+    }
+
+    .detail-icon { font-size:1.5rem; margin-bottom:6px; color:#f8dca0; }
+
+    .detail-date-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #fdf7ec;
+      line-height: 1;
+    }
+
+    .detail-date-month {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f8dca0;
+      font-weight: 600;
+    }
+
+    .detail-date-day {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f8dca0;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .detail-time { font-size:1.05rem; font-weight:600; color:#fdf7ec; }
+
+    .detail-time-line { width:30px; height:1px; background:#f8dca0; margin:6px auto; }
+
+    .detail-venue {
+      font-size: 0.82rem;
+      color: #f3e7d5;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .countdown-label-small {
+      margin-top: 8px;
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #f8dca0;
+    }
+
+    .countdown-timer-small { font-size:0.82rem; color:#fdf7ec; margin-top:2px; }
+
+    .venue-directions-btn {
+      margin-top: 10px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      background: linear-gradient(135deg, #c47c3b, #8f4920);
+      color: #fdf7ec;
+      box-shadow: 0 2px 8px rgba(99,50,22,0.6);
+      transition: all 0.2s;
+    }
+    .venue-directions-btn:hover {
+      transform:translateY(-1px);
+      box-shadow:0 4px 12px rgba(99,50,22,0.85);
+    }
+
+    .chief-guest-strip {
+      margin-top: 18px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(248,220,160,0.85);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      background: radial-gradient(
+        circle at 50% 0%,
+        rgba(248,220,160,0.4),
+        rgba(60,0,8,0.5)
+      );
+    }
+
+    .chief-guest-intro {
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f8dca0;
+      margin-bottom: 4px;
+    }
+
+    .chief-guest-name-line {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #fdf7ec;
+      font-weight: 700;
+    }
+
+    .chief-guest-title-line {
+      font-size: 0.86rem;
+      color: #f3e7d5;
+      margin-top: 2px;
+    }
+
+    .blessings {
+      font-style: italic;
+      font-size: 0.83rem;
+      color: #f8dca0;
+      margin-top: 19px;
+      margin-bottom: 5px;
+    }
+
+    .parents {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: #fdf7ec;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .footer-hearts { margin-top:18px; color:#f8dca0; font-size:0.95rem; letter-spacing:4px; }
+
+    @media (max-width:480px) {
+      .journey-flow { flex-direction:column; gap:10px; }
+      .journey-line { margin-top:8px; }
+      .couple-names { font-size:2.7rem; }
+      .main-title { font-size:clamp(1.7rem,5vw,2.2rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reverse-rain doodles with more decorative emojis [web:365][web:369][web:372][web:375] -->
+  <div class="doodle-bg">
+    <!-- love & peace -->
+    <div class="floater rain-slow-tall" style="left:8%;top:80%;font-size:1.8rem;color:#f8dca0;">
+      <span class="pigeon-wings">🕊️</span>
+    </div>
+    <div class="floater rain-fast-short" style="left:82%;top:78%;font-size:1.6rem;color:#fdf7ec;">
+      <span class="pigeon-wings">🕊️</span>
+    </div>
+
+    <!-- bells & rings -->
+    <div class="floater rain-slow-short" style="left:20%;top:85%;font-size:1.5rem;color:#f8dca0;">🔔</div>
+    <div class="floater rain-fast-tall" style="left:70%;top:88%;font-size:1.4rem;color:#c47c3b;">🔔</div>
+    <div class="floater rain-fast-short" style="left:48%;top:90%;font-size:1.6rem;color:#fdf7ec;">💍</div>
+
+    <!-- Christmas tree, stars, bouquet, flowers -->
+    <div class="floater rain-slow-tall" style="left:35%;top:92%;font-size:1.7rem;color:#f8dca0;">🎄</div>
+    <div class="floater rain-fast-short" style="left:55%;top:86%;font-size:1.6rem;color:#f8dca0;">⭐</div>
+    <div class="floater rain-slow-short" style="left:28%;top:88%;font-size:1.5rem;color:#fdf7ec;">💐</div>
+    <div class="floater rain-fast-tall" style="left:60%;top:94%;font-size:1.4rem;color:#f8dca0;">🌸</div>
+
+    <!-- Santa & sleigh -->
+    <div class="floater rain-slow-short" style="left:18%;top:96%;font-size:1.5rem;color:#fdf7ec;">🎅🦌</div>
+    <div class="floater rain-fast-tall" style="left:88%;top:95%;font-size:1.3rem;color:#fdf7ec;">🛷</div>
+
+    <!-- extra sparkles -->
+    <div class="floater rain-slow-short" style="left:32%;top:89%;font-size:1rem;color:#f8dca0;">✧</div>
+    <div class="floater rain-fast-short" style="left:92%;top:87%;font-size:1.1rem;color:#c47c3b;">✦</div>
+  </div>
+
+  <!-- Screen 1 -->
+  <div class="screen-main" id="screen-main">
+    <p class="tagline-top">YOU ARE CORDIALLY INVITED</p>
+    <h1 class="main-title">Indupallis Invitation</h1>
+    <!-- single ring as you asked -->
+    <div class="rings-doodle">💍</div>
+    <button class="invite-btn" id="openInviteBtn">OPEN INVITATION</button>
+    <p class="tagline-bottom">Tap to see the engagement details</p>
+  </div>
+
+  <!-- Screen 2 -->
+  <div class="screen-invite" id="screen-invite">
+    <div class="content-invite">
+      <div class="invite-inner">
+        <div class="cross">✝</div>
+
+        <p class="bible-quote">
+          “Let all that you do be done in love.”<br />
+          – 1 Corinthians 16:14
+        </p>
+
+        <div class="divider-heart">✦ ♥ ✦</div>
+        <p class="please-join">Please join us for the</p>
+        <h1 class="engagement-title">Engagement</h1>
+        <p class="celebration">Celebration of Love</p>
+
+        <div class="leaf-divider">❀❀❀</div>
+
+        <div class="couple-names">
+          Navya
+          <span class="amp">&amp;</span>
+          Raju
+        </div>
+
+        <div class="heart-small">♥</div>
+
+        <!-- hearts-full-of-love text BEFORE journey -->
+        <p class="cheers-msg">
+          With hearts full of love and gratitude, we invite you to join us in
+          showering your warm wishes and blessings upon the couple as they begin
+          this beautiful journey together.
+        </p>
+
+        <div class="journey-section">
+          <p class="journey-title">Our journey</p>
+          <p class="journey-subtitle">
+            A small story of how we met, fell in love and reached this engagement day.
+          </p>
+          <div class="journey-flow">
+            <div class="journey-step">
+              <div class="journey-icon">👫</div>
+              <div class="journey-label">We met</div>
+              <div class="journey-text">
+                Two hearts crossed paths and a simple hello became the start of something special.
+              </div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-icon">🛤️</div>
+              <div class="journey-label">Beautiful journey</div>
+              <div class="journey-text">
+                Laughter, late-night talks, prayers and dreams slowly wove our beautiful love story.
+              </div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-icon">💍</div>
+              <div class="journey-label">Engagement</div>
+              <div class="journey-text">
+                Today we promise forever, marking this engagement as the highlight of our journey.
+              </div>
+            </div>
+          </div>
+          <div class="journey-line"></div>
+        </div>
+
+        <div class="details-block">
+          <div class="details-row">
+            <div class="detail-item">
+              <div class="detail-icon">💕</div>
+              <div class="detail-date-num">25</div>
+              <div class="detail-date-month">July<br />2026</div>
+              <div class="detail-date-day">Saturday</div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">🕐</div>
+              <div class="detail-time">11:00 AM</div>
+              <div class="detail-time-line"></div>
+
+              <div class="countdown-label-small">Countdown</div>
+              <div id="countdown" class="countdown-timer-small">Calculating…</div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon">📍</div>
+              <div class="detail-venue">
+                Swarna Convention,<br />
+                Gurunanak Colony,<br />
+                Vijayawada
+              </div>
+              <button
+                type="button"
+                onclick="window.open(
+                  'https://www.google.com/maps/dir/?api=1&destination=Swarnas+Convention,+Guru+Nanak+Colony,+Vijayawada,+Andhra+Pradesh+520010',
+                  '_blank'
+                );"
+                class="venue-directions-btn"
+              >
+                Directions
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="chief-guest-strip">
+          <p class="chief-guest-intro">
+            With the gracious presence of
+          </p>
+          <p class="chief-guest-name-line">
+            Rev. P Noel Samuel
+          </p>
+          <p class="chief-guest-title-line">
+            IPC State Secretary
+          </p>
+        </div>
+
+        <p class="blessings">
+          Please bless us with your presence and heartfelt wishes as we step into this new chapter.
+        </p>
+
+        <p class="parents">
+          Mr. Indupalli Sudheer &amp;<br />
+          Mrs Indupalli Jaya Mani
+        </p>
+
+        <div class="footer-hearts">♥ ♥ ♥</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    (function() {
+      var countDownDate = new Date("July 25, 2026 11:00:00").getTime();
+
+      function updateCountdown() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var countdownEl = document.getElementById("countdown");
+        if (!countdownEl) return;
+
+        if (distance <= 0) {
+          countdownEl.textContent = "It's engagement time!";
+          clearInterval(intervalId);
+          return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24))
+                               / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60))
+                                 / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownEl.textContent =
+          days + " days : " +
+          hours + " hrs : " +
+          minutes + " mins : " +
+          seconds + " secs";
+      }
+
+      var intervalId = setInterval(updateCountdown, 1000);
+      updateCountdown();
+    })();
+  </script>
+
+  <!-- Background music -->
+  <audio id="bgMusic" src="bgm-indupalli.mp3.mpeg" loop></audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var body = document.body;
+      var mainScreen = document.getElementById('screen-main');
+      var inviteScreen = document.getElementById('screen-invite');
+      var openBtn = document.getElementById('openInviteBtn');
+      var audio = document.getElementById('bgMusic');
+
+      if (!audio) return;
+      audio.volume = 0.5;
+
+      if (openBtn) {
+        openBtn.addEventListener('click', function () {
+          mainScreen.style.display = 'none';
+          inviteScreen.style.display = 'flex';
+          body.classList.add('dark-mode');
+
+          audio.play().catch(function () {});
+        });
+      }
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      var audio = document.getElementById('bgMusic');
+      if (!audio) return;
+
+      if (document.hidden) {
+        audio.pause();
+      } else if (audio.currentTime > 0 && audio.paused) {
+        audio.play().catch(function () {});
+      }
+    });
+  </script>
+</body>
+</html>
