@@ -7,7 +7,8 @@
 <title>Tabassum Wedding | Nikah & Wedding</title>
 
 <meta name="theme-color" content="#061b38">
-<meta name="description" content="Wedding invitation of Roohi Tabassum & Towsee Khan">
+<meta name="description"
+      content="Wedding invitation of Roohi Tabassum & Towsee Khan">
 
 <style>
 
@@ -56,6 +57,7 @@ a{
     --ice:#dff8ff;
 
     --white:#ffffff;
+
     --glass:rgba(255,255,255,0.12);
     --glass-light:rgba(255,255,255,0.20);
 
@@ -162,6 +164,7 @@ a{
     position:absolute;
 
     left:-10%;
+
     width:120%;
 
     height:180px;
@@ -187,6 +190,7 @@ a{
 .wave.two{
     bottom:18%;
     transform:rotate(3deg);
+
     opacity:.25;
 }
 
@@ -194,6 +198,7 @@ a{
 .wave.three{
     top:15%;
     transform:rotate(-2deg);
+
     opacity:.18;
 }
 
@@ -204,6 +209,7 @@ a{
 
 .pattern{
     position:absolute;
+
     inset:0;
 
     opacity:.08;
@@ -243,6 +249,7 @@ a{
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     overflow:hidden;
@@ -503,6 +510,7 @@ a{
 
 
 #mainInvitation.show{
+
     display:block;
 
     animation:
@@ -762,7 +770,7 @@ section{
 
 
 /* =========================================================
-   SECOND PAGE / COUPLE
+   COUPLE
 ========================================================= */
 
 .couple-section{
@@ -810,6 +818,7 @@ section{
     box-shadow:
         0 0 0 60px
         rgba(24,128,167,.035),
+
         0 0 0 120px
         rgba(24,128,167,.025);
 }
@@ -981,7 +990,7 @@ section{
 
 
 /* =========================================================
-   NIKAH - COLOR CHANGE
+   NIKAH
 ========================================================= */
 
 .nikah-section{
@@ -1071,7 +1080,7 @@ section{
 
 
 /* =========================================================
-   EVENT
+   WEDDING EVENT
 ========================================================= */
 
 .event-section{
@@ -1200,155 +1209,272 @@ section{
 
 
 /* =========================================================
-   VENUE
+   LOCATION BOX
+   INSIDE WEDDING EVENT
 ========================================================= */
 
-.venue-section{
+.location-box{
 
     position:relative;
 
-    background:
-        linear-gradient(
-            145deg,
-            #d8f5fb,
-            #eefcff
-        );
-}
+    margin-top:45px;
 
-
-.venue-card{
-
-    max-width:850px;
-
-    margin:50px auto 0;
-
-    padding:55px 30px;
-
-    background:
-        rgba(255,255,255,.68);
-
-    border:
-        1px solid
-        rgba(255,255,255,.9);
-
-    box-shadow:
-        0 25px 70px
-        rgba(28,111,143,.1);
-
-    backdrop-filter:blur(20px);
-}
-
-
-.venue-card h3{
-
-    color:#0a3c5d;
-
-    font-size:
-        clamp(
-            25px,
-            5vw,
-            36px
-        );
-
-    font-weight:normal;
-
-    line-height:1.45;
-}
-
-
-.venue-address{
-
-    margin-top:20px;
-
-    color:#63798a;
-
-    line-height:1.8;
-}
-
-
-.venue-note{
-
-    margin-top:18px;
-
-    color:#708594;
-
-    font-size:13px;
-}
-
-
-.venue-link{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 28px;
-
-    color:white;
+    padding:45px 25px;
 
     background:
         linear-gradient(
             135deg,
-            #0b5b80,
-            #0d83a9
+            rgba(255,255,255,.78),
+            rgba(219,246,252,.68)
         );
-
-    text-decoration:none;
-
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    transition:.35s;
-
-    box-shadow:
-        0 12px 30px
-        rgba(8,83,116,.18);
-}
-
-
-.venue-link:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 18px 40px
-        rgba(8,83,116,.25);
-}
-
-
-.directions-btn{
-
-    display:inline-block;
-
-    margin-top:15px;
-
-    padding:12px 23px;
-
-    color:#0b5374;
 
     border:
         1px solid
-        #72afc2;
+        rgba(39,130,160,.20);
 
-    text-decoration:none;
+    backdrop-filter:blur(18px);
 
-    font-size:12px;
+    -webkit-backdrop-filter:blur(18px);
 
-    transition:.3s;
+    box-shadow:
+        0 18px 45px
+        rgba(30,110,140,.08);
+
+    overflow:hidden;
 }
 
 
-.directions-btn:hover{
+/* watery glow */
 
-    background:#0b5374;
+.location-box::before{
 
-    color:white;
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    top:-140px;
+
+    right:-80px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(78,196,222,.22),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+.location-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    bottom:-110px;
+
+    left:-70px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(72,177,207,.14),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+.location-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+}
+
+
+.location-label{
+
+    position:relative;
+
+    z-index:2;
+
+    color:
+        #a38442;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+
+.location-box h3{
+
+    position:relative;
+
+    z-index:2;
+
+    color:
+        #0a3c5d;
+
+    font-size:
+        clamp(
+            22px,
+            4vw,
+            32px
+        );
+
+    line-height:1.45;
+
+    font-weight:normal;
+
+    margin-bottom:15px;
+}
+
+
+.location-box p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:
+        #63798a;
+
+    line-height:1.7;
+
+    font-size:14px;
 }
 
 
 /* =========================================================
-   COUNTDOWN - DARK CONTRAST
+   LOCATION BUTTONS
+========================================================= */
+
+.location-buttons{
+
+    position:relative;
+
+    z-index:3;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:28px;
+}
+
+
+.location-primary{
+
+    display:inline-block;
+
+    padding:14px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a5478,
+            #0c83a8
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.location-primary:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(7,83,115,.22);
+}
+
+
+.location-secondary{
+
+    display:inline-block;
+
+    padding:13px 22px;
+
+    border:
+        1px solid
+        #72aebf;
+
+    color:
+        #0b5374;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    background:
+        rgba(255,255,255,.35);
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.location-secondary:hover{
+
+    background:
+        #0b5374;
+
+    color:white;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   COUNTDOWN
 ========================================================= */
 
 .countdown-section{
@@ -1701,11 +1827,34 @@ footer{
     }
 
 
-    .venue-card{
+    .event-card{
 
         padding:
             40px
-            20px;
+            18px;
+    }
+
+
+    .location-box{
+
+        padding:
+            40px
+            18px;
+    }
+
+
+    .location-buttons{
+
+        flex-direction:column;
+    }
+
+
+    .location-primary,
+    .location-secondary{
+
+        width:100%;
+
+        text-align:center;
     }
 
 }
@@ -1750,7 +1899,7 @@ footer{
 
 
 <!-- =========================================================
-     MUSIC
+     BACKGROUND MUSIC
 ========================================================= -->
 
 <audio
@@ -1767,13 +1916,14 @@ footer{
 
 <div id="openingScreen">
 
-
     <div class="water-bg"></div>
 
     <div class="pattern"></div>
 
     <div class="wave one"></div>
+
     <div class="wave two"></div>
+
     <div class="wave three"></div>
 
 
@@ -1850,13 +2000,12 @@ footer{
 
 
     <!-- =====================================================
-         MAIN PAGE
+         MAIN HERO
     ===================================================== -->
 
     <section
         class="hero"
         id="main">
-
 
         <div class="water-bg"></div>
 
@@ -1920,7 +2069,6 @@ footer{
 
     <section class="couple-section">
 
-
         <div class="section-inner">
 
 
@@ -1952,7 +2100,6 @@ footer{
 
                 <div class="person">
 
-
                     <div class="person-title">
                         The Bride
                     </div>
@@ -1976,7 +2123,6 @@ footer{
 
 
                 <div class="person">
-
 
                     <div class="person-title">
                         The Groom
@@ -2006,7 +2152,6 @@ footer{
     ===================================================== -->
 
     <section class="family-section">
-
 
         <div class="section-inner">
 
@@ -2146,17 +2291,18 @@ footer{
 
 
     <!-- =====================================================
-         EVENT
+         WEDDING EVENT + LOCATION
     ===================================================== -->
 
     <section class="event-section">
-
 
         <div class="section-inner">
 
 
             <div class="section-label">
+
                 Save The Date
+
             </div>
 
 
@@ -2180,6 +2326,8 @@ footer{
                 <div class="gold-line"></div>
 
 
+                <!-- DATE / TIME / CITY -->
+
                 <div class="event-info">
 
 
@@ -2197,7 +2345,9 @@ footer{
 
 
                         <div class="event-value">
+
                             To Be Announced
+
                         </div>
 
                     </div>
@@ -2217,7 +2367,9 @@ footer{
 
 
                         <div class="event-value">
+
                             To Be Announced
+
                         </div>
 
                     </div>
@@ -2237,94 +2389,79 @@ footer{
 
 
                         <div class="event-value">
+
                             Narsipatnam
+
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
-        </div>
+                <!-- =================================================
+                     LOCATION BOX
+                ================================================== -->
 
-    </section>
-
-
-    <!-- =====================================================
-         VENUE
-    ===================================================== -->
-
-    <section class="venue-section">
+                <div class="location-box">
 
 
-        <div class="section-inner">
+                    <div class="location-icon">
+                        📍
+                    </div>
 
 
-            <div class="section-label">
-                Wedding Venue
-            </div>
+                    <div class="location-label">
+
+                        Wedding Venue
+
+                    </div>
 
 
-            <h2 class="section-title">
+                    <h3>
 
-                Come Celebrate With Us
+                        SRI RAMACHANDRA RESIDENCY
+                        <br>
+                        & FUNCTION HALL
 
-            </h2>
-
-
-            <div class="venue-card">
-
-
-                <h3>
-
-                    SRI RAMACHANDRA RESIDENCY
-                    <br>
-                    & FUNCTION HALL
-
-                </h3>
+                    </h3>
 
 
-                <p class="venue-address">
+                    <p>
 
-                    Narsipatnam,
-                    <br>
-                    Andhra Pradesh
+                        Narsipatnam,
+                        Andhra Pradesh
 
-                </p>
-
-
-                <p class="venue-note">
-
-                    Tap below to open the exact
-                    location in Google Maps.
-
-                </p>
+                    </p>
 
 
-                <a
-                    class="venue-link"
-                    href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    ◇ OPEN LOCATION
-
-                </a>
+                    <div class="location-buttons">
 
 
-                <br>
+                        <a
+                            href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="location-primary">
+
+                            📍 OPEN LOCATION
+
+                        </a>
 
 
-                <a
-                    class="directions-btn"
-                    href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                        <a
+                            href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="location-secondary">
 
-                    GET DIRECTIONS →
+                            GET DIRECTIONS →
 
-                </a>
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -2536,22 +2673,34 @@ footer{
 ========================================================= */
 
 const openingScreen =
-    document.getElementById("openingScreen");
+    document.getElementById(
+        "openingScreen"
+    );
 
 const mainInvitation =
-    document.getElementById("mainInvitation");
+    document.getElementById(
+        "mainInvitation"
+    );
 
 const enterInvitation =
-    document.getElementById("enterInvitation");
+    document.getElementById(
+        "enterInvitation"
+    );
 
 const music =
-    document.getElementById("backgroundMusic");
+    document.getElementById(
+        "backgroundMusic"
+    );
 
 const musicControl =
-    document.getElementById("musicControl");
+    document.getElementById(
+        "musicControl"
+    );
 
 const homeButton =
-    document.getElementById("homeButton");
+    document.getElementById(
+        "homeButton"
+    );
 
 
 /* =========================================================
@@ -2564,23 +2713,30 @@ music.volume = 0.7;
 /*
    Try autoplay.
 
-   Some browsers will block audible autoplay.
-   That is why ENTER INVITATION also starts it.
+   Browsers may block audible autoplay.
+   The ENTER button will start it if that happens.
 */
 
-window.addEventListener("load", () => {
+window.addEventListener(
+    "load",
+    () => {
 
-    music.play().then(() => {
+        music.play()
+            .then(() => {
 
-        musicControl.textContent = "🔊";
+                musicControl.textContent =
+                    "🔊";
 
-    }).catch(() => {
+            })
+            .catch(() => {
 
-        musicControl.textContent = "🔇";
+                musicControl.textContent =
+                    "🔇";
 
-    });
+            });
 
-});
+    }
+);
 
 
 /* =========================================================
@@ -2591,33 +2747,41 @@ enterInvitation.addEventListener(
     "click",
     () => {
 
+
         /*
-           Start music from the MAIN INVITATION.
+           Start music from the invitation.
         */
 
-        music.play().then(() => {
+        music.play()
+            .then(() => {
 
-            musicControl.textContent = "🔊";
+                musicControl.textContent =
+                    "🔊";
 
-        }).catch(() => {});
+            })
+            .catch(() => {});
 
 
         /*
            Hide opening screen.
         */
 
-        openingScreen.classList.add("hidden");
+        openingScreen.classList.add(
+            "hidden"
+        );
 
 
         /*
-           Show main invitation.
+           Show invitation.
         */
 
-        mainInvitation.classList.add("show");
+        mainInvitation.classList.add(
+            "show"
+        );
 
 
         /*
-           Start from top of main page.
+           Start at main page.
         */
 
         window.scrollTo({
@@ -2639,8 +2803,10 @@ homeButton.addEventListener(
 
         /*
            Does NOT reload the page.
-           Does NOT restart music.
-           Simply goes back to the main hero.
+
+           Does NOT restart the music.
+
+           Just returns to the main hero.
         */
 
         document
@@ -2655,20 +2821,24 @@ homeButton.addEventListener(
 
 
 /* =========================================================
-   MUSIC CONTROL
+   MUSIC BUTTON
 ========================================================= */
 
 musicControl.addEventListener(
     "click",
     () => {
 
+
         if(music.paused){
 
-            music.play().then(() => {
+            music.play()
+                .then(() => {
 
-                musicControl.textContent = "🔊";
+                    musicControl.textContent =
+                        "🔊";
 
-            }).catch(() => {});
+                })
+                .catch(() => {});
 
         }
 
@@ -2676,7 +2846,8 @@ musicControl.addEventListener(
 
             music.pause();
 
-            musicControl.textContent = "🔇";
+            musicControl.textContent =
+                "🔇";
 
         }
 
@@ -2685,21 +2856,22 @@ musicControl.addEventListener(
 
 
 /* =========================================================
-   TAB SWITCH
+   TAB SWITCHING
 ========================================================= */
 
 /*
-   When the visitor switches to another tab:
+   When visitor switches to another tab:
 
-   MUSIC STOPS.
+   Music pauses.
 
-   The page itself DOES NOT reset.
+   Page DOES NOT reload.
 
-   Their scroll position stays exactly where
-   they left it.
+   Scroll position remains.
 
-   When they come back:
-   MUSIC DOES NOT AUTOMATICALLY RESTART.
+   When visitor returns:
+
+   Music remains paused until
+   they manually press the music button.
 */
 
 document.addEventListener(
@@ -2710,7 +2882,8 @@ document.addEventListener(
 
             music.pause();
 
-            musicControl.textContent = "🔇";
+            musicControl.textContent =
+                "🔇";
 
         }
 
@@ -2719,7 +2892,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   WINDOW BLUR
+   WINDOW LOSES FOCUS
 ========================================================= */
 
 window.addEventListener(
@@ -2728,7 +2901,8 @@ window.addEventListener(
 
         music.pause();
 
-        musicControl.textContent = "🔇";
+        musicControl.textContent =
+            "🔇";
 
     }
 );
@@ -2739,7 +2913,10 @@ window.addEventListener(
 ========================================================= */
 
 /*
-   Replace this with the REAL wedding date/time.
+   IMPORTANT:
+
+   Replace this with the actual wedding
+   date and time.
 
    Example:
 
@@ -2758,8 +2935,10 @@ function updateCountdown(){
             WEDDING_DATE
         ).getTime();
 
+
     const now =
         new Date().getTime();
+
 
     const difference =
         weddingDate - now;
@@ -2769,19 +2948,27 @@ function updateCountdown(){
 
         document.getElementById(
             "days"
-        ).textContent = "00";
+        ).textContent =
+            "00";
+
 
         document.getElementById(
             "hours"
-        ).textContent = "00";
+        ).textContent =
+            "00";
+
 
         document.getElementById(
             "minutes"
-        ).textContent = "00";
+        ).textContent =
+            "00";
+
 
         document.getElementById(
             "seconds"
-        ).textContent = "00";
+        ).textContent =
+            "00";
+
 
         return;
 
@@ -2855,30 +3042,43 @@ function updateCountdown(){
     document.getElementById(
         "days"
     ).textContent =
-        String(days).padStart(2,"0");
+        String(days).padStart(
+            2,
+            "0"
+        );
 
 
     document.getElementById(
         "hours"
     ).textContent =
-        String(hours).padStart(2,"0");
+        String(hours).padStart(
+            2,
+            "0"
+        );
 
 
     document.getElementById(
         "minutes"
     ).textContent =
-        String(minutes).padStart(2,"0");
+        String(minutes).padStart(
+            2,
+            "0"
+        );
 
 
     document.getElementById(
         "seconds"
     ).textContent =
-        String(seconds).padStart(2,"0");
+        String(seconds).padStart(
+            2,
+            "0"
+        );
 
 }
 
 
 updateCountdown();
+
 
 setInterval(
     updateCountdown,
