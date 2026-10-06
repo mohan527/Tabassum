@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tabassum Wedding | Nikah & Wedding</title>
 
-<meta name="theme-color" content="#061b38">
-<meta name="description"
-      content="Wedding invitation of Roohi Tabassum & Towsee Khan">
+<meta
+    name="theme-color"
+    content="#061b38"
+>
+
+<meta
+    name="description"
+    content="Wedding invitation of Roohi Tabassum & Towsee Khan"
+>
+
 
 <style>
 
@@ -27,13 +36,16 @@ html{
 }
 
 body{
+
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
     background:#061a32;
+
     color:#10233c;
+
     overflow-x:hidden;
 }
 
@@ -50,21 +62,29 @@ a{
 :root{
 
     --navy:#061a32;
+
     --deep-blue:#08294d;
+
     --ocean:#0c4770;
+
     --blue:#1677a8;
+
     --aqua:#55c7df;
+
     --ice:#dff8ff;
 
     --white:#ffffff;
 
     --glass:rgba(255,255,255,0.12);
+
     --glass-light:rgba(255,255,255,0.20);
 
     --gold:#d8b86a;
+
     --gold-light:#f1d994;
 
     --text:#19324d;
+
     --muted:#60758c;
 }
 
@@ -74,23 +94,29 @@ a{
 ========================================================= */
 
 .water-bg{
+
     position:absolute;
+
     inset:0;
 
     overflow:hidden;
+
     pointer-events:none;
 }
 
 
 .water-bg::before{
+
     content:"";
 
     position:absolute;
 
     width:900px;
+
     height:900px;
 
     top:-400px;
+
     left:-250px;
 
     background:
@@ -108,14 +134,17 @@ a{
 
 
 .water-bg::after{
+
     content:"";
 
     position:absolute;
 
     width:700px;
+
     height:700px;
 
     right:-250px;
+
     bottom:-250px;
 
     background:
@@ -161,6 +190,7 @@ a{
 ========================================================= */
 
 .wave{
+
     position:absolute;
 
     left:-10%;
@@ -182,13 +212,17 @@ a{
 
 
 .wave.one{
+
     bottom:8%;
+
     transform:rotate(-4deg);
 }
 
 
 .wave.two{
+
     bottom:18%;
+
     transform:rotate(3deg);
 
     opacity:.25;
@@ -196,7 +230,9 @@ a{
 
 
 .wave.three{
+
     top:15%;
+
     transform:rotate(-2deg);
 
     opacity:.18;
@@ -208,6 +244,7 @@ a{
 ========================================================= */
 
 .pattern{
+
     position:absolute;
 
     inset:0;
@@ -215,6 +252,7 @@ a{
     opacity:.08;
 
     background-image:
+
         linear-gradient(
             30deg,
             rgba(255,255,255,.5) 12%,
@@ -222,6 +260,7 @@ a{
             transparent 87%,
             rgba(255,255,255,.5) 87.5%
         ),
+
         linear-gradient(
             150deg,
             rgba(255,255,255,.5) 12%,
@@ -255,6 +294,7 @@ a{
     overflow:hidden;
 
     background:
+
         radial-gradient(
             circle at 50% 35%,
             #165a82 0%,
@@ -303,6 +343,7 @@ a{
         rgba(255,255,255,.22);
 
     background:
+
         linear-gradient(
             135deg,
             rgba(255,255,255,.12),
@@ -347,12 +388,16 @@ a{
 @keyframes moonGlow{
 
     0%,100%{
+
         transform:translateY(0);
+
         opacity:.85;
     }
 
     50%{
+
         transform:translateY(-7px);
+
         opacity:1;
     }
 }
@@ -430,6 +475,7 @@ a{
     margin:25px auto;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -450,6 +496,7 @@ a{
         rgba(241,217,148,.7);
 
     background:
+
         linear-gradient(
             135deg,
             rgba(255,255,255,.16),
@@ -505,6 +552,7 @@ a{
 ========================================================= */
 
 #mainInvitation{
+
     display:none;
 }
 
@@ -521,12 +569,16 @@ a{
 @keyframes mainReveal{
 
     from{
+
         opacity:0;
+
         transform:scale(1.02);
     }
 
     to{
+
         opacity:1;
+
         transform:scale(1);
     }
 }
@@ -583,6 +635,7 @@ a{
     inset:0;
 
     background:
+
         linear-gradient(
             120deg,
             transparent 25%,
@@ -620,6 +673,31 @@ a{
     max-width:900px;
 
     padding:50px 25px;
+}
+
+
+/* =========================================================
+   BISMILLAH AT START OF SECOND PAGE
+========================================================= */
+
+.hero-bismillah{
+
+    color:#9b7b36;
+
+    font-size:
+        clamp(
+            22px,
+            4vw,
+            30px
+        );
+
+    margin-bottom:30px;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 3px 15px
+        rgba(155,123,54,.15);
 }
 
 
@@ -709,10 +787,11 @@ a{
 
 
 /* =========================================================
-   SECTION COMMON
+   COMMON SECTIONS
 ========================================================= */
 
 section{
+
     padding:110px 20px;
 }
 
@@ -816,6 +895,7 @@ section{
         rgba(24,128,167,.12);
 
     box-shadow:
+
         0 0 0 60px
         rgba(24,128,167,.035),
 
@@ -925,6 +1005,7 @@ section{
 .family-section{
 
     background:
+
         linear-gradient(
             180deg,
             #dff7fc,
@@ -1065,6 +1146,10 @@ section{
         var(--gold-light);
 
     margin-bottom:25px;
+
+    font-size:21px;
+
+    line-height:2;
 }
 
 
@@ -1140,6 +1225,7 @@ section{
     height:1px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -1210,7 +1296,6 @@ section{
 
 /* =========================================================
    LOCATION BOX
-   INSIDE WEDDING EVENT
 ========================================================= */
 
 .location-box{
@@ -1222,6 +1307,7 @@ section{
     padding:45px 25px;
 
     background:
+
         linear-gradient(
             135deg,
             rgba(255,255,255,.78),
@@ -1244,8 +1330,6 @@ section{
 }
 
 
-/* watery glow */
-
 .location-box::before{
 
     content:"";
@@ -1263,6 +1347,7 @@ section{
     border-radius:50%;
 
     background:
+
         radial-gradient(
             circle,
             rgba(78,196,222,.22),
@@ -1290,6 +1375,7 @@ section{
     border-radius:50%;
 
     background:
+
         radial-gradient(
             circle,
             rgba(72,177,207,.14),
@@ -1371,7 +1457,7 @@ section{
 
 
 /* =========================================================
-   LOCATION BUTTONS
+   LOCATION BUTTON
 ========================================================= */
 
 .location-buttons{
@@ -1386,10 +1472,6 @@ section{
 
     align-items:center;
 
-    gap:12px;
-
-    flex-wrap:wrap;
-
     margin-top:28px;
 }
 
@@ -1398,9 +1480,10 @@ section{
 
     display:inline-block;
 
-    padding:14px 24px;
+    padding:14px 28px;
 
     background:
+
         linear-gradient(
             135deg,
             #0a5478,
@@ -1429,47 +1512,6 @@ section{
     box-shadow:
         0 12px 30px
         rgba(7,83,115,.22);
-}
-
-
-.location-secondary{
-
-    display:inline-block;
-
-    padding:13px 22px;
-
-    border:
-        1px solid
-        #72aebf;
-
-    color:
-        #0b5374;
-
-    text-decoration:none;
-
-    font-size:11px;
-
-    letter-spacing:1.5px;
-
-    background:
-        rgba(255,255,255,.35);
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        transform .3s ease;
-}
-
-
-.location-secondary:hover{
-
-    background:
-        #0b5374;
-
-    color:white;
-
-    transform:
-        translateY(-2px);
 }
 
 
@@ -1571,6 +1613,7 @@ section{
     position:relative;
 
     background:
+
         linear-gradient(
             135deg,
             #e9fbff,
@@ -1770,6 +1813,14 @@ footer{
     }
 
 
+    .hero-bismillah{
+
+        font-size:22px;
+
+        margin-bottom:25px;
+    }
+
+
     .couple-grid{
 
         grid-template-columns:1fr;
@@ -1843,34 +1894,11 @@ footer{
     }
 
 
-    .location-buttons{
-
-        flex-direction:column;
-    }
-
-
-    .location-primary,
-    .location-secondary{
+    .location-primary{
 
         width:100%;
 
         text-align:center;
-    }
-
-}
-
-
-@media(max-width:400px){
-
-    .opening-title{
-
-        font-size:41px;
-    }
-
-
-    .hero h1{
-
-        font-size:55px;
     }
 
 
@@ -1891,7 +1919,24 @@ footer{
 
 }
 
+
+@media(max-width:400px){
+
+    .opening-title{
+
+        font-size:41px;
+    }
+
+
+    .hero h1{
+
+        font-size:55px;
+    }
+
+}
+
 </style>
+
 </head>
 
 
@@ -1953,7 +1998,7 @@ footer{
 
             <div class="opening-title">
 
-                The Wedding
+                The Tabassum Wedding
 
             </div>
 
@@ -2000,8 +2045,8 @@ footer{
 
 
     <!-- =====================================================
-         MAIN HERO
-    ===================================================== -->
+         HERO / SECOND PAGE START
+    ====================================================== -->
 
     <section
         class="hero"
@@ -2012,6 +2057,17 @@ footer{
 
         <div class="hero-content">
 
+
+            <!-- BISMILLAH FIRST -->
+
+            <div class="hero-bismillah">
+
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+
+            </div>
+
+
+            <!-- THEN NEW CHAPTER -->
 
             <div class="hero-badge">
 
@@ -2065,7 +2121,7 @@ footer{
 
     <!-- =====================================================
          COUPLE
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="couple-section">
 
@@ -2101,41 +2157,55 @@ footer{
                 <div class="person">
 
                     <div class="person-title">
+
                         The Bride
+
                     </div>
 
 
                     <h3>
+
                         Roohi Tabassum
+
                     </h3>
 
 
                     <div class="person-subtitle">
+
                         Noor-e-Chashmi
+
                     </div>
 
                 </div>
 
 
                 <div class="couple-symbol">
+
                     ♡
+
                 </div>
 
 
                 <div class="person">
 
                     <div class="person-title">
+
                         The Groom
+
                     </div>
 
 
                     <h3>
+
                         Towsee Khan
+
                     </h3>
 
 
                     <div class="person-subtitle">
+
                         Barkhurdar
+
                     </div>
 
                 </div>
@@ -2149,7 +2219,7 @@ footer{
 
     <!-- =====================================================
          FAMILY
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="family-section">
 
@@ -2157,7 +2227,9 @@ footer{
 
 
             <div class="section-label">
+
                 With Their Families
+
             </div>
 
 
@@ -2175,26 +2247,32 @@ footer{
 
 
                     <h3>
+
                         Bride's Family
+
                     </h3>
 
 
                     <p>
+
                         Mrs. Zarina Begum
+
                     </p>
 
 
                     <p>
+
                         Mohammed Sajid Naimuddin
                         <br>
                         <em>(Late)</em>
+
                     </p>
 
 
                     <p>
-                        Narsipatnam,
-                        <br>
+
                         Anakapalli District
+
                     </p>
 
                 </div>
@@ -2204,18 +2282,24 @@ footer{
 
 
                     <h3>
+
                         Groom's Family
+
                     </h3>
 
 
                     <p>
+
                         Mr. & Mrs.
                         Pathan Hameed Khan Sahab
+
                     </p>
 
 
                     <p>
+
                         Guntur
+
                     </p>
 
                 </div>
@@ -2229,7 +2313,7 @@ footer{
 
     <!-- =====================================================
          NIKAH
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="nikah-section">
 
@@ -2238,7 +2322,9 @@ footer{
 
 
             <div class="section-label">
+
                 In The Name Of Allah
+
             </div>
 
 
@@ -2291,8 +2377,8 @@ footer{
 
 
     <!-- =====================================================
-         WEDDING EVENT + LOCATION
-    ===================================================== -->
+         WEDDING EVENT
+    ====================================================== -->
 
     <section class="event-section">
 
@@ -2326,7 +2412,7 @@ footer{
                 <div class="gold-line"></div>
 
 
-                <!-- DATE / TIME / CITY -->
+                <!-- DATE -->
 
                 <div class="event-info">
 
@@ -2335,12 +2421,16 @@ footer{
 
 
                         <div class="event-icon">
+
                             ✦
+
                         </div>
 
 
                         <div class="event-label">
+
                             Date
+
                         </div>
 
 
@@ -2353,16 +2443,22 @@ footer{
                     </div>
 
 
+                    <!-- TIME -->
+
                     <div class="event-item">
 
 
                         <div class="event-icon">
+
                             ◷
+
                         </div>
 
 
                         <div class="event-label">
+
                             Time
+
                         </div>
 
 
@@ -2375,22 +2471,28 @@ footer{
                     </div>
 
 
+                    <!-- LOCATION -->
+
                     <div class="event-item">
 
 
                         <div class="event-icon">
+
                             ◇
+
                         </div>
 
 
                         <div class="event-label">
-                            Location
+
+                            Venue
+
                         </div>
 
 
                         <div class="event-value">
 
-                            Narsipatnam
+                            Function Hall
 
                         </div>
 
@@ -2407,7 +2509,9 @@ footer{
 
 
                     <div class="location-icon">
+
                         📍
+
                     </div>
 
 
@@ -2429,8 +2533,8 @@ footer{
 
                     <p>
 
-                        Narsipatnam,
-                        Andhra Pradesh
+                        SRI RAMACHANDRA RESIDENCY
+                        & FUNCTION HALL
 
                     </p>
 
@@ -2449,16 +2553,6 @@ footer{
                         </a>
 
 
-                        <a
-                            href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="location-secondary">
-
-                            GET DIRECTIONS →
-
-                        </a>
-
                     </div>
 
                 </div>
@@ -2472,7 +2566,7 @@ footer{
 
     <!-- =====================================================
          COUNTDOWN
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="countdown-section">
 
@@ -2510,7 +2604,9 @@ footer{
 
 
                     <span class="count-label">
+
                         Days
+
                     </span>
 
                 </div>
@@ -2528,7 +2624,9 @@ footer{
 
 
                     <span class="count-label">
+
                         Hours
+
                     </span>
 
                 </div>
@@ -2546,7 +2644,9 @@ footer{
 
 
                     <span class="count-label">
+
                         Minutes
+
                     </span>
 
                 </div>
@@ -2564,7 +2664,9 @@ footer{
 
 
                     <span class="count-label">
+
                         Seconds
+
                     </span>
 
                 </div>
@@ -2578,7 +2680,7 @@ footer{
 
     <!-- =====================================================
          CLOSING
-    ===================================================== -->
+    ====================================================== -->
 
     <section class="closing-section">
 
@@ -2625,7 +2727,7 @@ footer{
 
     <!-- =====================================================
          FOOTER
-    ===================================================== -->
+    ====================================================== -->
 
     <footer>
 
@@ -2634,6 +2736,7 @@ footer{
         ROOHI & TOWSEE
 
     </footer>
+
 
 </div>
 
@@ -2677,25 +2780,30 @@ const openingScreen =
         "openingScreen"
     );
 
+
 const mainInvitation =
     document.getElementById(
         "mainInvitation"
     );
+
 
 const enterInvitation =
     document.getElementById(
         "enterInvitation"
     );
 
+
 const music =
     document.getElementById(
         "backgroundMusic"
     );
 
+
 const musicControl =
     document.getElementById(
         "musicControl"
     );
+
 
 const homeButton =
     document.getElementById(
@@ -2704,17 +2812,18 @@ const homeButton =
 
 
 /* =========================================================
-   MUSIC
+   MUSIC SETTINGS
 ========================================================= */
 
 music.volume = 0.7;
 
 
 /*
-   Try autoplay.
+   Browser autoplay policy may prevent
+   music from playing with sound automatically.
 
-   Browsers may block audible autoplay.
-   The ENTER button will start it if that happens.
+   The Enter button starts it reliably
+   after the user's interaction.
 */
 
 window.addEventListener(
@@ -2722,12 +2831,14 @@ window.addEventListener(
     () => {
 
         music.play()
+
             .then(() => {
 
                 musicControl.textContent =
                     "🔊";
 
             })
+
             .catch(() => {
 
                 musicControl.textContent =
@@ -2748,45 +2859,34 @@ enterInvitation.addEventListener(
     () => {
 
 
-        /*
-           Start music from the invitation.
-        */
-
         music.play()
+
             .then(() => {
 
                 musicControl.textContent =
                     "🔊";
 
             })
+
             .catch(() => {});
 
-
-        /*
-           Hide opening screen.
-        */
 
         openingScreen.classList.add(
             "hidden"
         );
 
 
-        /*
-           Show invitation.
-        */
-
         mainInvitation.classList.add(
             "show"
         );
 
 
-        /*
-           Start at main page.
-        */
-
         window.scrollTo({
+
             top:0,
+
             behavior:"instant"
+
         });
 
     }
@@ -2801,19 +2901,14 @@ homeButton.addEventListener(
     "click",
     () => {
 
-        /*
-           Does NOT reload the page.
-
-           Does NOT restart the music.
-
-           Just returns to the main hero.
-        */
-
         document
             .getElementById("main")
             .scrollIntoView({
+
                 behavior:"smooth",
+
                 block:"start"
+
             });
 
     }
@@ -2821,7 +2916,7 @@ homeButton.addEventListener(
 
 
 /* =========================================================
-   MUSIC BUTTON
+   MUSIC CONTROL
 ========================================================= */
 
 musicControl.addEventListener(
@@ -2832,12 +2927,14 @@ musicControl.addEventListener(
         if(music.paused){
 
             music.play()
+
                 .then(() => {
 
                     musicControl.textContent =
                         "🔊";
 
                 })
+
                 .catch(() => {});
 
         }
@@ -2859,21 +2956,6 @@ musicControl.addEventListener(
    TAB SWITCHING
 ========================================================= */
 
-/*
-   When visitor switches to another tab:
-
-   Music pauses.
-
-   Page DOES NOT reload.
-
-   Scroll position remains.
-
-   When visitor returns:
-
-   Music remains paused until
-   they manually press the music button.
-*/
-
 document.addEventListener(
     "visibilitychange",
     () => {
@@ -2892,7 +2974,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   WINDOW LOSES FOCUS
+   WINDOW FOCUS
 ========================================================= */
 
 window.addEventListener(
@@ -2913,15 +2995,12 @@ window.addEventListener(
 ========================================================= */
 
 /*
-   IMPORTANT:
-
-   Replace this with the actual wedding
-   date and time.
+   Replace this date once you provide
+   the actual wedding date and time.
 
    Example:
 
-   const WEDDING_DATE =
-       "2027-01-15T11:00:00";
+   "2027-01-15T11:00:00"
 */
 
 const WEDDING_DATE =
@@ -2948,26 +3027,22 @@ function updateCountdown(){
 
         document.getElementById(
             "days"
-        ).textContent =
-            "00";
+        ).textContent = "00";
 
 
         document.getElementById(
             "hours"
-        ).textContent =
-            "00";
+        ).textContent = "00";
 
 
         document.getElementById(
             "minutes"
-        ).textContent =
-            "00";
+        ).textContent = "00";
 
 
         document.getElementById(
             "seconds"
-        ).textContent =
-            "00";
+        ).textContent = "00";
 
 
         return;
@@ -3086,6 +3161,7 @@ setInterval(
 );
 
 </script>
+
 
 </body>
 </html>
