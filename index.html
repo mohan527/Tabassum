@@ -6,17 +6,17 @@
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0,
-             maximum-scale=1.0, user-scalable=no"
+    maximum-scale=1.0, user-scalable=no"
   >
 
-  <meta name="theme-color" content="#23483b">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#173d32">
 
-  <title>Roohi Tabassum & Towsee Khan | Wedding Invitation</title>
+  <title>
+    Roohi Tabassum & Towsee Khan | Wedding Invitation
+  </title>
 
   <!-- =====================================================
-       GOOGLE FONTS
+       FONTS
   ====================================================== -->
 
   <link
@@ -36,13 +36,11 @@
       --ivory: #faf6ed;
       --cream: #f3ead9;
 
-      --deep-green: #23483b;
-      --forest-green: #18392f;
-      --dark-green: #102b24;
+      --green: #23483b;
+      --dark-green: #102c24;
+      --deep-green: #18392f;
 
-      --sage: #718274;
-
-      --champagne: #c6a15b;
+      --gold: #c6a15b;
       --soft-gold: #d8bd7a;
       --light-gold: #ead9a8;
 
@@ -55,20 +53,25 @@
 
 
     /* =====================================================
-       GLOBAL
+       RESET
     ====================================================== */
 
     * {
+
       margin: 0;
       padding: 0;
+
       box-sizing: border-box;
 
       -webkit-tap-highlight-color: transparent;
+
     }
 
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
 
@@ -77,15 +80,20 @@
       min-height: 100vh;
       min-height: 100dvh;
 
-      font-family: "Poppins", sans-serif;
+      font-family:
+        "Poppins",
+        sans-serif;
 
-      color: var(--brown);
+      overflow-x: hidden;
+
+      color:
+        var(--brown);
 
       background:
 
         radial-gradient(
           circle at 50% 0%,
-          rgba(198,161,91,0.15),
+          rgba(198,161,91,0.16),
           transparent 38%
         ),
 
@@ -96,44 +104,45 @@
           #eee3d0 100%
         );
 
-      overflow-x: hidden;
-
       transition:
-        background 1.2s ease,
-        color 1.2s ease;
+        background 1.2s ease;
 
     }
 
 
     body.wedding-mode {
 
-      color: var(--ivory);
+      color:
+        var(--ivory);
 
       background:
 
         radial-gradient(
           circle at 50% 0%,
-          rgba(198,161,91,0.14),
+          rgba(216,189,122,0.14),
           transparent 35%
         ),
 
         linear-gradient(
           145deg,
           #18392f 0%,
-          #23483b 48%,
-          #102b24 100%
+          #23483b 50%,
+          #102c24 100%
         );
 
     }
 
 
     button {
-      font-family: inherit;
+
+      font-family:
+        inherit;
+
     }
 
 
     /* =====================================================
-       DECORATIVE BACKGROUND
+       BACKGROUND
     ====================================================== */
 
     .background {
@@ -155,19 +164,20 @@
 
       position: absolute;
 
-      width: 340px;
-      height: 340px;
+      width: 350px;
+      height: 350px;
 
       border-radius: 50%;
 
       background:
-        rgba(198,161,91,0.08);
+        rgba(198,161,91,0.07);
 
-      filter: blur(60px);
+      filter:
+        blur(65px);
 
       animation:
         glowMove
-        14s ease-in-out
+        15s ease-in-out
         infinite alternate;
 
     }
@@ -175,8 +185,8 @@
 
     .glow.one {
 
-      top: -120px;
-      left: -120px;
+      top: -130px;
+      left: -130px;
 
     }
 
@@ -184,9 +194,10 @@
     .glow.two {
 
       right: -130px;
-      bottom: -120px;
+      bottom: -130px;
 
-      animation-delay: 3s;
+      animation-delay:
+        4s;
 
     }
 
@@ -220,9 +231,11 @@
 
       position: absolute;
 
-      color: var(--champagne);
+      color:
+        var(--gold);
 
-      opacity: 0.5;
+      opacity:
+        0.5;
 
       animation:
         twinkle
@@ -234,46 +247,49 @@
 
     .star:nth-child(3) {
 
-      top: 11%;
-      left: 12%;
+      top: 12%;
+      left: 13%;
 
-      font-size: 13px;
+      font-size: 12px;
 
     }
 
 
     .star:nth-child(4) {
 
-      top: 21%;
-      right: 16%;
+      top: 22%;
+      right: 15%;
 
-      font-size: 10px;
+      font-size: 9px;
 
-      animation-delay: 1s;
+      animation-delay:
+        1s;
 
     }
 
 
     .star:nth-child(5) {
 
-      bottom: 22%;
+      bottom: 23%;
       left: 9%;
 
       font-size: 11px;
 
-      animation-delay: 2s;
+      animation-delay:
+        2s;
 
     }
 
 
     .star:nth-child(6) {
 
-      bottom: 13%;
+      bottom: 12%;
       right: 10%;
 
       font-size: 15px;
 
-      animation-delay: 1.5s;
+      animation-delay:
+        1.5s;
 
     }
 
@@ -283,7 +299,8 @@
       0%,
       100% {
 
-        opacity: 0.2;
+        opacity:
+          0.18;
 
         transform:
           scale(0.8);
@@ -292,7 +309,8 @@
 
       50% {
 
-        opacity: 0.8;
+        opacity:
+          0.75;
 
         transform:
           scale(1.2);
@@ -303,7 +321,7 @@
 
 
     /* =====================================================
-       WELCOME SCREEN
+       OPENING SCREEN
     ====================================================== */
 
     .welcome-screen {
@@ -315,33 +333,38 @@
       min-height: 100vh;
       min-height: 100dvh;
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: center;
+      align-items:
+        center;
 
-      align-items: center;
+      justify-content:
+        center;
 
-      padding: 30px 20px;
+      padding:
+        25px 18px;
 
-      text-align: center;
+      text-align:
+        center;
 
       transition:
-
-        opacity 0.8s ease,
-
-        transform 0.8s ease;
+        opacity 0.9s ease,
+        transform 0.9s ease;
 
     }
 
 
     .welcome-screen.hide {
 
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         scale(1.04);
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
     }
 
@@ -352,44 +375,107 @@
 
     .welcome-card {
 
-      width: 100%;
+      position:
+        relative;
 
-      max-width: 560px;
+      width:
+        100%;
 
-      padding: 46px 26px;
+      max-width:
+        560px;
+
+      min-height:
+        650px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      padding:
+        45px 28px;
 
       border:
-
         1px solid
-        rgba(198,161,91,0.52);
+        rgba(198,161,91,0.55);
 
-      border-radius: 30px;
+      border-radius:
+        32px;
 
       background:
 
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.94),
-          rgba(250,246,237,0.91)
+          rgba(255,255,255,0.92),
+          rgba(250,246,237,0.96)
         );
 
       box-shadow:
 
-        0 25px 70px
-        rgba(74,61,43,0.16),
+        0 30px 80px
+        rgba(74,61,43,0.17),
 
-        inset 0 0 45px
+        inset 0 0 50px
         rgba(198,161,91,0.045);
 
-      backdrop-filter:
-        blur(10px);
+      overflow:
+        hidden;
+
+    }
+
+
+    /* Decorative border */
+
+    .welcome-card::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      inset:
+        13px;
+
+      border:
+        1px solid
+        rgba(198,161,91,0.28);
+
+      border-radius:
+        24px;
+
+      pointer-events:
+        none;
 
     }
 
 
     /* =====================================================
-       BISMILLAH
+       OPENING ORNAMENT
     ====================================================== */
+
+    .opening-top {
+
+      color:
+        var(--gold);
+
+      font-size:
+        1rem;
+
+      letter-spacing:
+        9px;
+
+      margin-bottom:
+        20px;
+
+    }
+
 
     .bismillah {
 
@@ -397,15 +483,17 @@
         "Amiri",
         serif;
 
-      font-size:
-        clamp(1.15rem,4vw,1.5rem);
+      direction:
+        rtl;
 
       color:
         var(--deep-green);
 
-      margin-bottom: 22px;
+      font-size:
+        clamp(1.2rem,5vw,1.6rem);
 
-      direction: rtl;
+      margin-bottom:
+        22px;
 
     }
 
@@ -414,28 +502,58 @@
        CRESCENT
     ====================================================== */
 
-    .crescent {
+    .moon-wrap {
 
-      font-size: 4rem;
+      position:
+        relative;
 
-      color:
-        var(--champagne);
+      width:
+        105px;
 
-      margin-bottom: 15px;
+      height:
+        105px;
 
-      animation:
-        floatMoon
-        4s ease-in-out
-        infinite;
+      display:
+        flex;
 
-      text-shadow:
-        0 5px 20px
-        rgba(198,161,91,0.2);
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      margin-bottom:
+        18px;
 
     }
 
 
-    @keyframes floatMoon {
+    .moon {
+
+      font-size:
+        4.5rem;
+
+      color:
+        var(--gold);
+
+      line-height:
+        1;
+
+      filter:
+        drop-shadow(
+          0 5px 12px
+          rgba(198,161,91,0.2)
+        );
+
+      animation:
+        moonFloat
+        4s ease-in-out
+        infinite;
+
+    }
+
+
+    @keyframes moonFloat {
 
       0%,
       100% {
@@ -448,7 +566,7 @@
       50% {
 
         transform:
-          translateY(-8px);
+          translateY(-7px);
 
       }
 
@@ -456,146 +574,259 @@
 
 
     /* =====================================================
-       WELCOME TEXT
+       OPENING TEXT
     ====================================================== */
 
-    .welcome-small {
+    .opening-small {
 
-      font-size: 0.72rem;
+      font-size:
+        0.68rem;
 
-      letter-spacing: 4px;
+      letter-spacing:
+        4px;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
       color:
         var(--muted-brown);
 
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
 
     }
 
 
-    .welcome-title,
-    .welcome-groom {
+    .opening-script {
 
       font-family:
         "Great Vibes",
         cursive;
 
       font-size:
-        clamp(3.3rem,12vw,5.2rem);
+        clamp(2.4rem,10vw,3.6rem);
 
-      font-weight: 400;
+      color:
+        var(--green);
+
+      line-height:
+        1;
+
+    }
+
+
+    .opening-main-title {
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(1.5rem,6vw,2rem);
+
+      font-weight:
+        500;
+
+      letter-spacing:
+        3px;
+
+      text-transform:
+        uppercase;
 
       color:
         var(--deep-green);
 
-      line-height: 1.02;
+      margin:
+        8px 0;
 
     }
 
 
-    .welcome-amp {
+    .opening-gold-line {
 
-      font-family:
-        "Playfair Display",
-        serif;
+      display:
+        flex;
 
-      font-size: 1.65rem;
+      align-items:
+        center;
+
+      gap:
+        12px;
+
+      margin:
+        10px 0 14px;
 
       color:
-        var(--champagne);
+        var(--gold);
 
-      margin: 9px 0;
+      font-size:
+        0.8rem;
 
     }
 
 
-    .welcome-subtitle {
+    .opening-gold-line::before,
+    .opening-gold-line::after {
 
-      margin-top: 24px;
+      content:
+        "";
+
+      width:
+        48px;
+
+      height:
+        1px;
+
+      background:
+        var(--gold);
+
+    }
+
+
+    .opening-names {
+
+      font-family:
+        "Great Vibes",
+        cursive;
+
+      font-size:
+        clamp(3.1rem,12vw,4.7rem);
+
+      line-height:
+        1;
+
+      color:
+        var(--green);
+
+    }
+
+
+    .opening-amp {
 
       font-family:
         "Playfair Display",
         serif;
 
-      font-size: 0.98rem;
+      color:
+        var(--gold);
 
-      line-height: 1.7;
+      font-size:
+        1.5rem;
+
+      margin:
+        7px 0;
+
+    }
+
+
+    .opening-subtitle {
+
+      font-family:
+        "Playfair Display",
+        serif;
 
       color:
         var(--muted-brown);
 
-      font-style: italic;
+      font-size:
+        0.88rem;
+
+      font-style:
+        italic;
+
+      line-height:
+        1.7;
+
+      max-width:
+        360px;
+
+      margin-top:
+        18px;
 
     }
 
 
     /* =====================================================
-       OPEN BUTTON
+       ENTER BUTTON
     ====================================================== */
 
-    .open-button {
+    .enter-button {
 
-      margin-top: 30px;
+      margin-top:
+        30px;
 
       padding:
-        15px 34px;
+        14px 30px;
+
+      min-width:
+        210px;
 
       border:
         1px solid
-        var(--champagne);
+        var(--gold);
 
       border-radius:
         999px;
 
       background:
-        var(--deep-green);
+        var(--green);
 
       color:
         var(--white);
 
       font-size:
-        0.82rem;
+        0.72rem;
 
       font-weight:
         600;
 
       letter-spacing:
-        2px;
+        2.5px;
 
       cursor:
         pointer;
 
       box-shadow:
-        0 10px 30px
-        rgba(35,72,59,0.2);
+        0 10px 28px
+        rgba(35,72,59,0.18);
 
       transition:
-        0.25s ease;
+        all 0.25s ease;
 
     }
 
 
-    .open-button:hover {
+    .enter-button:hover {
+
+      background:
+        var(--dark-green);
 
       transform:
         translateY(-3px);
 
-      background:
-        var(--forest-green);
-
       box-shadow:
         0 15px 35px
-        rgba(35,72,59,0.28);
+        rgba(35,72,59,0.25);
 
     }
 
 
-    .open-button:active {
+    .opening-bottom {
 
-      transform:
-        scale(0.97);
+      margin-top:
+        20px;
+
+      font-size:
+        0.62rem;
+
+      letter-spacing:
+        2px;
+
+      color:
+        #a09585;
+
+      text-transform:
+        uppercase;
 
     }
 
@@ -606,22 +837,29 @@
 
     .invitation {
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      display: none;
+      display:
+        none;
 
-      width: 100%;
+      width:
+        100%;
 
-      max-width: 760px;
+      max-width:
+        760px;
 
-      margin: auto;
+      margin:
+        auto;
 
       padding:
-        38px 18px 65px;
+        38px 18px 70px;
 
-      text-align: center;
+      text-align:
+        center;
 
       animation:
         invitationIn
@@ -635,7 +873,8 @@
 
       from {
 
-        opacity: 0;
+        opacity:
+          0;
 
         transform:
           translateY(25px);
@@ -644,7 +883,8 @@
 
       to {
 
-        opacity: 1;
+        opacity:
+          1;
 
         transform:
           translateY(0);
@@ -655,7 +895,7 @@
 
 
     /* =====================================================
-       TOP ORNAMENT
+       TOP
     ====================================================== */
 
     .ornament {
@@ -664,13 +904,13 @@
         var(--soft-gold);
 
       font-size:
-        1.35rem;
+        1.25rem;
 
       letter-spacing:
         8px;
 
       margin-bottom:
-        18px;
+        17px;
 
     }
 
@@ -681,45 +921,41 @@
         "Amiri",
         serif;
 
+      direction:
+        rtl;
+
       color:
         var(--light-gold);
 
       font-size:
         clamp(1.7rem,6vw,2.2rem);
 
-      direction:
-        rtl;
-
       margin-bottom:
         12px;
-
-      text-shadow:
-        0 3px 15px
-        rgba(0,0,0,0.18);
 
     }
 
 
     .invitation-intro {
 
-      font-family:
-        "Playfair Display",
-        serif;
-
-      font-size:
-        0.9rem;
-
-      line-height:
-        1.9;
-
-      color:
-        rgba(250,246,237,0.88);
-
       max-width:
         590px;
 
       margin:
         auto;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        0.88rem;
+
+      line-height:
+        1.9;
+
+      color:
+        rgba(250,246,237,0.86);
 
     }
 
@@ -732,10 +968,10 @@
     .groom-label {
 
       margin-top:
-        30px;
+        31px;
 
       font-size:
-        0.68rem;
+        0.66rem;
 
       letter-spacing:
         4px;
@@ -757,7 +993,7 @@
         cursive;
 
       font-size:
-        clamp(3.2rem,12vw,5.1rem);
+        clamp(3.2rem,12vw,5rem);
 
       line-height:
         1;
@@ -765,12 +1001,12 @@
       color:
         var(--ivory);
 
-      text-shadow:
-        0 4px 22px
-        rgba(0,0,0,0.25);
-
       margin-top:
         8px;
+
+      text-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.2);
 
     }
 
@@ -782,7 +1018,7 @@
         serif;
 
       font-size:
-        0.85rem;
+        0.84rem;
 
       color:
         rgba(250,246,237,0.7);
@@ -791,7 +1027,7 @@
         italic;
 
       margin-top:
-        9px;
+        8px;
 
     }
 
@@ -803,31 +1039,31 @@
         cursive;
 
       font-size:
-        3.1rem;
+        3rem;
 
       color:
         var(--soft-gold);
 
       margin:
-        15px 0;
+        14px 0;
 
     }
 
 
     /* =====================================================
-       NIKAH CARD
+       NIKAH
     ====================================================== */
 
     .nikah-card {
 
-      margin:
-        36px auto 26px;
-
       max-width:
         600px;
 
+      margin:
+        36px auto 26px;
+
       padding:
-        31px 23px;
+        30px 22px;
 
       border-top:
         1px solid
@@ -879,7 +1115,7 @@
         cursive;
 
       font-size:
-        2.05rem;
+        2rem;
 
       color:
         #e8d7ad;
@@ -905,7 +1141,7 @@
 
 
     /* =====================================================
-       FAMILY SECTION
+       FAMILY
     ====================================================== */
 
     .family-section {
@@ -928,20 +1164,17 @@
     .family-card {
 
       padding:
-        23px 16px;
+        22px 15px;
 
       border:
         1px solid
-        rgba(216,189,122,0.27);
+        rgba(216,189,122,0.28);
 
       border-radius:
         18px;
 
       background:
         rgba(255,255,255,0.035);
-
-      backdrop-filter:
-        blur(5px);
 
     }
 
@@ -958,11 +1191,8 @@
       font-size:
         0.88rem;
 
-      letter-spacing:
-        1px;
-
       margin-bottom:
-        11px;
+        10px;
 
     }
 
@@ -982,13 +1212,13 @@
 
 
     /* =====================================================
-       EVENT SECTION
+       EVENT
     ====================================================== */
 
     .event-section {
 
       margin-top:
-        37px;
+        38px;
 
     }
 
@@ -996,7 +1226,7 @@
     .section-heading {
 
       font-size:
-        0.7rem;
+        0.69rem;
 
       letter-spacing:
         4px;
@@ -1016,14 +1246,14 @@
     .event-card {
 
       padding:
-        27px 16px;
-
-      border-radius:
-        22px;
+        28px 16px;
 
       border:
         1px solid
         rgba(216,189,122,0.4);
+
+      border-radius:
+        22px;
 
       background:
         linear-gradient(
@@ -1031,10 +1261,6 @@
           rgba(255,255,255,0.045),
           rgba(0,0,0,0.09)
         );
-
-      box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.08);
 
     }
 
@@ -1057,7 +1283,7 @@
     .event-time {
 
       margin-top:
-        7px;
+        6px;
 
       color:
         rgba(250,246,237,0.8);
@@ -1068,20 +1294,41 @@
     }
 
 
-    .event-venue {
+    /* =====================================================
+       CLICKABLE VENUE
+    ====================================================== */
+
+    .venue-link {
+
+      display:
+        block;
+
+      text-decoration:
+        none;
+
+      cursor:
+        pointer;
 
       margin-top:
         19px;
+
+    }
+
+
+    .event-venue {
 
       font-family:
         "Playfair Display",
         serif;
 
       font-size:
-        1.13rem;
+        1.15rem;
 
       color:
         var(--light-gold);
+
+      transition:
+        color 0.2s ease;
 
     }
 
@@ -1103,8 +1350,43 @@
     }
 
 
+    .venue-link:hover
+    .event-venue {
+
+      color:
+        #fff0bb;
+
+      text-decoration:
+        underline;
+
+      text-underline-offset:
+        5px;
+
+    }
+
+
+    .click-hint {
+
+      margin-top:
+        7px;
+
+      font-size:
+        0.62rem;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform:
+        uppercase;
+
+      color:
+        var(--soft-gold);
+
+    }
+
+
     /* =====================================================
-       DIRECTIONS
+       DIRECTIONS BUTTON
     ====================================================== */
 
     .directions-button {
@@ -1113,14 +1395,14 @@
         18px;
 
       padding:
-        10px 22px;
-
-      border-radius:
-        999px;
+        10px 23px;
 
       border:
         1px solid
-        var(--champagne);
+        var(--gold);
+
+      border-radius:
+        999px;
 
       background:
         transparent;
@@ -1129,10 +1411,13 @@
         var(--light-gold);
 
       font-size:
-        0.76rem;
+        0.75rem;
 
       font-weight:
         600;
+
+      letter-spacing:
+        0.5px;
 
       cursor:
         pointer;
@@ -1146,7 +1431,7 @@
     .directions-button:hover {
 
       background:
-        var(--champagne);
+        var(--gold);
 
       color:
         var(--dark-green);
@@ -1252,7 +1537,7 @@
     .closing {
 
       margin-top:
-        43px;
+        44px;
 
     }
 
@@ -1322,7 +1607,7 @@
         18px;
 
       z-index:
-        10;
+        20;
 
       width:
         46px;
@@ -1335,7 +1620,7 @@
 
       border:
         1px solid
-        var(--champagne);
+        var(--gold);
 
       background:
         var(--deep-green);
@@ -1350,17 +1635,6 @@
         0 8px 25px
         rgba(0,0,0,0.25);
 
-      transition:
-        0.25s ease;
-
-    }
-
-
-    .music-button:hover {
-
-      transform:
-        scale(1.06);
-
     }
 
 
@@ -1370,11 +1644,13 @@
 
     @media (max-width: 600px) {
 
-
       .welcome-card {
 
+        min-height:
+          610px;
+
         padding:
-          37px 19px;
+          40px 20px;
 
       }
 
@@ -1398,6 +1674,14 @@
       }
 
 
+      .arabic {
+
+        font-size:
+          1.6rem;
+
+      }
+
+
       .nikah-title {
 
         font-size:
@@ -1413,14 +1697,6 @@
 
       }
 
-
-      .arabic {
-
-        font-size:
-          1.6rem;
-
-      }
-
     }
 
 
@@ -1433,7 +1709,7 @@
 
 
   <!-- =====================================================
-       BACKGROUND DECORATIONS
+       BACKGROUND
   ====================================================== -->
 
   <div class="background">
@@ -1466,6 +1742,13 @@
     <div class="welcome-card">
 
 
+      <div class="opening-top">
+
+        ✦ ✧ ✦
+
+      </div>
+
+
       <div class="bismillah">
 
         بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
@@ -1473,57 +1756,83 @@
       </div>
 
 
-      <div class="crescent">
+      <div class="moon-wrap">
 
-        ☪
+        <div class="moon">
+
+          ☪
+
+        </div>
 
       </div>
 
 
-      <div class="welcome-small">
+      <div class="opening-small">
 
         With the blessings of Allah
 
       </div>
 
 
-      <div class="welcome-title">
+      <div class="opening-script">
+
+        The Wedding Of
+
+      </div>
+
+
+      <div class="opening-gold-line">
+
+        ✦
+
+      </div>
+
+
+      <div class="opening-names">
 
         Roohi
 
       </div>
 
 
-      <div class="welcome-amp">
+      <div class="opening-amp">
 
         &amp;
 
       </div>
 
 
-      <div class="welcome-groom">
+      <div class="opening-names">
 
         Towsee
 
       </div>
 
 
-      <p class="welcome-subtitle">
+      <p class="opening-subtitle">
 
-        Cordially invite you to celebrate
+        Together with their families,
+        they invite you to celebrate
         their Nikah &amp; Wedding
 
       </p>
 
 
       <button
-        class="open-button"
+        class="enter-button"
         id="openInvitation"
       >
 
-        OPEN INVITATION
+        ENTER INVITATION
 
       </button>
+
+
+      <div class="opening-bottom">
+
+        A celebration of love • faith • family
+
+      </div>
 
 
     </div>
@@ -1533,7 +1842,7 @@
 
 
   <!-- =====================================================
-       MAIN WEDDING INVITATION
+       MAIN INVITATION
   ====================================================== -->
 
   <main
@@ -1542,8 +1851,6 @@
   >
 
 
-    <!-- TOP ORNAMENT -->
-
     <div class="ornament">
 
       ✦ ✧ ✦
@@ -1551,16 +1858,12 @@
     </div>
 
 
-    <!-- BISMILLAH -->
-
     <div class="arabic">
 
       بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
 
     </div>
 
-
-    <!-- INTRODUCTION -->
 
     <p class="invitation-intro">
 
@@ -1603,7 +1906,7 @@
 
 
     <!-- =================================================
-         AMPERSAND
+         AND
     ================================================== -->
 
     <div class="and-symbol">
@@ -1684,8 +1987,6 @@
     <section class="family-section">
 
 
-      <!-- BRIDE FAMILY -->
-
       <div class="family-card">
 
         <h3>
@@ -1716,8 +2017,6 @@
       </div>
 
 
-
-      <!-- GROOM FAMILY -->
 
       <div class="family-card">
 
@@ -1762,12 +2061,7 @@
       <div class="event-card">
 
 
-        <!--
-          ==================================================
-          CHANGE THESE FOUR DETAILS
-          ==================================================
-        -->
-
+        <!-- CHANGE DATE -->
 
         <div class="event-date">
 
@@ -1776,6 +2070,8 @@
         </div>
 
 
+        <!-- CHANGE TIME -->
+
         <div class="event-time">
 
           WEDDING TIME
@@ -1783,19 +2079,49 @@
         </div>
 
 
-        <div class="event-venue">
+        <!-- =================================================
+             CLICKABLE LOCATION
+        ==================================================
 
-          WEDDING VENUE
+             Clicking anywhere on the venue opens your
+             exact Google Maps location.
+        ================================================== -->
 
-        </div>
+        <a
+          class="venue-link"
+          href="https://maps.app.goo.gl/MU6e5k2CtNicSMdA9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div class="event-venue">
+
+            SRI RAMACHANDRA RESIDENCY &amp;
+            FUNCTION HALL
+
+          </div>
 
 
-        <div class="event-address">
+          <div class="event-address">
 
-          Venue Address
+            Narsipatnam, Andhra Pradesh
 
-        </div>
+          </div>
 
+
+          <div class="click-hint">
+
+            Tap venue to open location
+
+          </div>
+
+        </a>
+
+
+
+        <!-- =================================================
+             DIRECTIONS BUTTON
+        ================================================== -->
 
         <button
           class="directions-button"
@@ -1963,30 +2289,30 @@
 
 
   <!-- =====================================================
-       BACKGROUND MUSIC
+       MUSIC
   ====================================================== -->
 
   <!--
-    Put the music file in the SAME folder as index.html.
+       IMPORTANT:
 
-    Example:
+       Your GitHub file is:
 
-    index.html
-    bgm-indupalli.mp3.mpeg
+       wed music.mp3
 
-    If your music has another filename,
-    change the src below.
+       Since the filename contains a space,
+       %20 is used in the URL.
   -->
 
   <audio
     id="backgroundMusic"
-    src="bgm-indupalli.mp3.mpeg"
+    src="wed%20music.mp3"
     loop
+    preload="auto"
   ></audio>
 
 
 
-  <!-- MUSIC BUTTON -->
+  <!-- MUSIC CONTROL -->
 
   <button
     class="music-button"
@@ -2013,20 +2339,13 @@
 
 
     /*
-      IMPORTANT:
+       CHANGE THIS TO THE ACTUAL WEDDING DATE/TIME.
 
-      Change this to the actual
-      wedding date and time.
+       Example:
 
-      Format:
+       20 December 2026, 7:00 PM
 
-      YYYY-MM-DDTHH:MM:SS
-
-      Example:
-
-      20 December 2026 at 7:00 PM
-
-      "2026-12-20T19:00:00"
+       "2026-12-20T19:00:00"
     */
 
 
@@ -2034,15 +2353,13 @@
       "2027-01-01T11:00:00";
 
 
-
     /*
-      CHANGE THIS TO YOUR ACTUAL
-      GOOGLE MAPS DIRECTIONS URL.
+       YOUR EXACT GOOGLE MAPS LOCATION
     */
 
 
     const GOOGLE_MAPS_URL =
-      "https://www.google.com/maps/dir/?api=1&destination=YOUR+VENUE+HERE";
+      "https://maps.app.goo.gl/MU6e5k2CtNicSMdA9";
 
 
 
@@ -2074,6 +2391,60 @@
       );
 
 
+    const musicButton =
+      document.getElementById(
+        "musicButton"
+      );
+
+
+
+    /* =====================================================
+       TRY AUTOPLAY
+    ====================================================== */
+
+    /*
+       Modern browsers may block audible autoplay.
+
+       We try it when the page loads.
+
+       If blocked, the Enter Invitation button
+       will start the music because that click
+       counts as user interaction.
+    */
+
+
+    window.addEventListener(
+      "load",
+      function () {
+
+        music.volume =
+          0.55;
+
+        music
+          .play()
+          .then(
+            function () {
+
+              musicButton.textContent =
+                "♪";
+
+            }
+          )
+          .catch(
+            function () {
+
+              console.log(
+                "Autoplay blocked until user interaction."
+              );
+
+            }
+          );
+
+      }
+    );
+
+
+
     /* =====================================================
        OPEN INVITATION
     ====================================================== */
@@ -2084,16 +2455,27 @@
 
 
         /*
-          Start music after user interaction.
+           Start music.
+
+           This works even when browser
+           blocked autoplay previously.
         */
 
         music
           .play()
+          .then(
+            function () {
+
+              musicButton.textContent =
+                "♪";
+
+            }
+          )
           .catch(
             function () {
 
               console.log(
-                "Browser blocked autoplay."
+                "Music could not be started."
               );
 
             }
@@ -2101,8 +2483,7 @@
 
 
         /*
-          Change background
-          from ivory to wedding green.
+           Change background.
         */
 
         document.body.classList.add(
@@ -2111,7 +2492,7 @@
 
 
         /*
-          Animate opening screen.
+           Hide opening screen.
         */
 
         welcomeScreen.classList.add(
@@ -2120,7 +2501,7 @@
 
 
         /*
-          Show invitation.
+           Show invitation.
         */
 
         setTimeout(
@@ -2145,7 +2526,7 @@
 
 
           },
-          700
+          800
         );
 
       }
@@ -2154,14 +2535,8 @@
 
 
     /* =====================================================
-       MUSIC CONTROL
+       MUSIC BUTTON
     ====================================================== */
-
-    const musicButton =
-      document.getElementById(
-        "musicButton"
-      );
-
 
     musicButton.addEventListener(
       "click",
@@ -2173,13 +2548,18 @@
 
           music
             .play()
+            .then(
+              function () {
+
+                musicButton.textContent =
+                  "♪";
+
+              }
+            )
             .catch(
               function () {}
+
             );
-
-
-          musicButton.textContent =
-            "♪";
 
 
         } else {
@@ -2190,7 +2570,6 @@
 
           musicButton.textContent =
             "🔇";
-
 
         }
 
@@ -2221,7 +2600,7 @@
 
 
       /*
-        Wedding date reached.
+         Wedding has started/passed.
       */
 
       if (difference <= 0) {
@@ -2296,51 +2675,35 @@
       document.getElementById(
         "days"
       ).textContent =
-        String(days).padStart(
-          2,
-          "0"
-        );
+        String(days)
+          .padStart(2, "0");
 
 
       document.getElementById(
         "hours"
       ).textContent =
-        String(hours).padStart(
-          2,
-          "0"
-        );
+        String(hours)
+          .padStart(2, "0");
 
 
       document.getElementById(
         "minutes"
       ).textContent =
-        String(minutes).padStart(
-          2,
-          "0"
-        );
+        String(minutes)
+          .padStart(2, "0");
 
 
       document.getElementById(
         "seconds"
       ).textContent =
-        String(seconds).padStart(
-          2,
-          "0"
-        );
+        String(seconds)
+          .padStart(2, "0");
 
     }
 
 
-    /*
-      Run immediately.
-    */
-
     updateCountdown();
 
-
-    /*
-      Update every second.
-    */
 
     setInterval(
       updateCountdown,
@@ -2358,7 +2721,8 @@
 
       window.open(
         GOOGLE_MAPS_URL,
-        "_blank"
+        "_blank",
+        "noopener,noreferrer"
       );
 
     }
