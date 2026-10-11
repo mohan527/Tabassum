@@ -347,6 +347,14 @@ a{
     display:inline-block;
 
     transform:rotate(45deg);
+.moon-svg{
+
+    display:inline-block;
+
+    transform:rotate(20deg);
+
+    filter:drop-shadow(0 0 18px rgba(241,217,148,.45));
+}
 }
 
 @keyframes moonGlow{
@@ -1765,9 +1773,20 @@ footer{
 
         <div class="opening-inner">
 
-            <div class="moon">
+            <!-- <div class="moon">
                <span class="moon-tilt">☽</span>
-            </div>
+            </div> -->
+            <div class="moon">
+    <svg class="moon-svg" viewBox="0 0 100 100" width="80" height="80" aria-hidden="true">
+        <defs>
+            <mask id="moonMask">
+                <rect width="100" height="100" fill="white"/>
+                <circle cx="38" cy="40" r="38" fill="black"/>
+            </mask>
+        </defs>
+        <circle cx="50" cy="50" r="40" fill="#f1d994" mask="url(#moonMask)"/>
+    </svg>
+</div>
 
             <div class="opening-bismillah">
 
